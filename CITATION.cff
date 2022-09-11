@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Thomas
+    given-names: David
+    orcid: https://orcid.org/0000-0001-5494-6297
+title: "Bit Dungeon: Binary Exercise for Non-Technical Students"
+version: 0.0.1
+date-released: 2022-09-12
+license: MIT
+repository-code: "https://github.com/thePortus/bit-dungeon"

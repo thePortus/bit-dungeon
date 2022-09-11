@@ -1,0 +1,21 @@
+<mat-toolbar class="mat-elevation-z8" color="primary" fxLayout="row">
+
+    <!-- Site Header Info -->
+    <div class="full-width" routerLink="" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+      <div class="header-title"><strong>{{ settings.siteName }}</strong></div>
+      <div class="header-credit">By {{ settings.author }}, Copyright, &copy; {{ settings.copyright }}</div>
+    </div>
+  
+    <!-- Nav Menu -->
+    <div>
+      <button mat-raised-button color="accent" [matMenuTriggerFor]="navmenu" aria-label="Navigation Menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #navmenu="matMenu">
+        <span *ngFor="let menuLink of menuLinks">
+          <button mat-menu-item (click)="navigate(menuLink.path)" aria-label="Navigation Button">{{ menuLink.label }}</button>
+        </span>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+  
