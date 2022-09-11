@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
       'path': ''
     }, {
       'label': 'Game',
-      'path': ''
+      'path': '/game'
     },
   ];
 

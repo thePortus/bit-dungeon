@@ -38,8 +38,20 @@ export class SwitchesService {
     g: false,
     h: false
   };
+  
 
-  constructor() { }
+  constructor() {}
+
+  toggle(switchToToggle: string) {
+    type ObjectKey = keyof typeof this.switches;
+    const switchKey = switchToToggle as ObjectKey;
+    if (!['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'].includes(switchToToggle)) {
+      console.log('ERROR: attempted to toggle invalid switch:' + switchToToggle);
+      return null;
+    }
+    this.switches[switchKey] = !this.switches[switchKey];
+    return true;
+  }
 
   total() {
     let sum = 0;
