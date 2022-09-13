@@ -28,6 +28,7 @@ import { NotFoundComponent } from './components/common/not-found/not-found.compo
 import { GameComponent } from './components/game/game.component';
 import { SwitchesComponent } from './components/game/switches/switches.component';
 import { TotalComponent } from './components/game/total/total.component';
+import { TargetComponent } from './components/game/target/target.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { TotalComponent } from './components/game/total/total.component';
     NotFoundComponent,
     GameComponent,
     SwitchesComponent,
-    TotalComponent
+    TotalComponent,
+    TargetComponent
   ],
   imports: [
     BrowserModule,

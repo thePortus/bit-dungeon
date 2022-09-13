@@ -36,8 +36,11 @@ export class SwitchesService {
     e: false,
     f: false,
     g: false,
-    h: false
+    h: false,
   };
+  private _target = new BehaviorSubject<number>(0);
+  readonly target$ = this._target.asObservable();
+  private target = 0;
   
 
   constructor() {}
@@ -84,5 +87,18 @@ export class SwitchesService {
 
   isEqual(value: number) {
     return this.total() === value;
+  }
+
+  isSolved() {
+    return this.isEqual(this.target);
+  }
+
+  setTarget(value: number) {
+    this.target = value;
+  }
+
+  setRandom() {
+    let targetValue = Math.floor(Math.random() * (255 - 1) + 1);
+    this.setTarget(targetValue);
   }
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { Switches, SwitchesService } from './../../services/switches.service';
 
 @Component({
   selector: 'app-game',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _switches: SwitchesService
+  ) { }
 
   ngOnInit(): void {
+    this._switches.setRandom();
   }
 
 }
